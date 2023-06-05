@@ -13,7 +13,6 @@ interface FetchResponse<T> {
 }
 
 
-// const usePlatforms = () => ({ data: platforms, isLoading: false, error: null });
 const usePlatforms = () =>
   useQuery({
     queryKey: ["platforms"],
