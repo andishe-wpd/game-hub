@@ -12,11 +12,13 @@ interface FetchResponse<T> {
   results: T[];
 }
 
-
 const usePlatforms = () =>
   useQuery({
     queryKey: ["platforms"],
-    queryFn: () => apiClient.get<FetchResponse<Platform>>("parent_platforms").then((res) => res.data),
+    queryFn: () =>
+      apiClient
+        .get<FetchResponse<Platform>>("platforms/lists/parents")
+        .then((res) => res.data),
     initialData: { count: platforms.length, results: platforms },
   });
 
