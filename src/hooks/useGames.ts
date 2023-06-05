@@ -36,7 +36,7 @@ const useGames = (gameQuery: GameQuery) =>
             ordering: gameQuery.sortOrder,
             search: gameQuery.searchText,
           },
-        })
+        },)
         .then((res) => res.data),
   });
 
