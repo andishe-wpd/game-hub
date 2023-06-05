@@ -17,7 +17,7 @@ interface FetchResponse<T> {
 const usePlatforms = () =>
   useQuery({
     queryKey: ["platforms"],
-    queryFn: () => apiClient.get<FetchResponse<Platform>>("platforms").then((res) => res.data),
+    queryFn: () => apiClient.get<FetchResponse<Platform>>("parent_platforms").then((res) => res.data),
     initialData: { count: platforms.length, results: platforms },
   });
 
